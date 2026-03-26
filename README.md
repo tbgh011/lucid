@@ -44,22 +44,18 @@ See the [Releases page](https://github.com/tbgh011/lucid/releases) to download t
 - The included installer handles all dependencies automatically
 
 ## Installation
-
 ### Windows
-Extract the zip, open `installer\windows\`, right-click `install.bat` and choose **Run as administrator**.
-
-### macOS
-Extract the zip, open Terminal, `cd` to `installer/macos/`, and run:
-```bash
-bash install.sh
-```
-
+Download and extract `lucid_v1.2.0.zip`, then open `installer\windows\`, right-click `install.bat` and choose **Run as administrator**.
 ### Linux
-Extract the zip, open Terminal, `cd` to `installer/linux/`, and run:
+Download and extract `lucid_v1.2.0.zip`, then open Terminal and run:
 ```bash
-bash install.sh
+bash installer/linux/install.sh
 ```
-
+### macOS
+Download `lucid_v1.2.0.zip` — macOS will automatically extract it to your Downloads folder. Then open Terminal and run:
+```bash
+bash ~/Downloads/lucid_v1.2.0/installer/macos/install.sh
+```
 The installer GUI will open and guide you through the rest of the process.
 
 ## Documentation
