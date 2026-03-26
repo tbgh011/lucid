@@ -1,6 +1,16 @@
 # Lucid — Video File Align & Stack
 
-Lucid is a video file align and stack application for planetary, lunar, and solar astronomy. It takes SER or AVI video files as input, analyzes each frame for quality, aligns them to a common reference, and stacks the best frames to produce a high signal-to-noise output image.
+Lucid is a free, open source, actively developed video file align and stack application for Linux, macOS and Windows. It takes SER or AVI video files as input, analyzes each frame for quality, aligns them to a common reference, and stacks the best frames to produce a high signal-to-noise output image.
+
+## Reporting Bugs and Requesting Features
+To report a bug, request a feature, or ask a question, please use the **Issues** tab at the top of this repository.
+
+1. Click **Issues**
+2. Click **New Issue**
+3. Choose the Bug Report or Feature Request template
+4. Fill in the details and submit
+
+This helps keep all feedback organized and easy to track.
 
 ## Features
 
@@ -63,14 +73,11 @@ Full documentation is included as downloads on the Releases page:
 | Technical Reference | Algorithm details, architecture, API reference |
 | Tutorials | Worked examples for Jupiter, Saturn, and other targets |
 
-## Workflow
+## Copyright
 
-1. **Load** — Open a SER or AVI video file
-2. **Analyze** — Quality-rank all frames; set the stack percentage
-3. **Align** — (Optional) place Alignment Points for local shift-field correction
-4. **Stack** — Choose drizzle scale and output format; click Stack Frames
-5. **Post-process** — Open the stacked TIFF in Kepler or your processing software
+Copyright © 2026 Tony Bailey. (tbgh011)
 
-## About
+This project — **Kepler: Planetary Image Processing Suite** — is released under the MIT License.  
+You are free to use, modify, distribute, and build upon this software, provided that the original copyright notice and license text are included in all copies or substantial portions of the software.
 
-Lucid is designed to complement AutoStakkert!4 and similar stacking tools. Its particular strengths are flexible quality-ranked stacking with drizzle integration and local AP shift-field correction.
+See the [LICENSE](LICENSE) file for full terms.
