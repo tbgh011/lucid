@@ -54,7 +54,7 @@ bash installer/linux/install.sh
 ### macOS
 Download `lucid_v1.2.0.zip` — macOS will automatically extract it to your Downloads folder. Then open Terminal and run:
 ```bash
-bash ~/Downloads/lucid_v1.2.0/installer/macos/install.sh
+bash ~/Downloads/lucid_v1/installer/macos/install.sh
 ```
 The installer GUI will open and guide you through the rest of the process.
 
