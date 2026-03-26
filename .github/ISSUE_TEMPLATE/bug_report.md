@@ -24,5 +24,5 @@ Screenshots, logs, or sample images.
 
 ### Environment
 - OS:
-- Kepler version:
+- Lucid version:
 - Hardware:
