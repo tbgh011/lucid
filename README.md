@@ -1,6 +1,6 @@
 # Lucid — Video File Align & Stack
 
-Lucid is a free, open source, actively developed video file align and stack application for Linux, macOS and Windows. It takes SER or AVI video files as input, analyzes each frame for quality, aligns them to a common reference, and stacks the best frames to produce a high signal-to-noise output image.
+Lucid is a free, open source, actively developed video file align and stack application for Linux, macOS and Windows.
 
 ## Reporting Bugs and Requesting Features
 To report a bug, request a feature, or ask a question, please use the **Issues** tab at the top of this repository.
