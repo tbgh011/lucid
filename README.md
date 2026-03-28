@@ -3,6 +3,7 @@
 Lucid is a free, open source, actively developed video file align and stack application for Linux, macOS and Windows.
 
 ## Reporting Bugs and Requesting Features
+
 To report a bug, request a feature, or ask a question, please use the **Issues** tab at the top of this repository.
 
 1. Click **Issues**
@@ -15,13 +16,13 @@ This helps keep all feedback organized and easy to track.
 ## Features
 
 - Quality-ranked frame selection with Laplacian sharpness metric
-- Raw Bayer quality analysis (~43× more sensitive than debayered analysis)
-- Centroid-based global alignment (sub-pixel accuracy, <0.02 px typical error)
-- Alignment Point (AP) local shift-field correction via Gaussian RBF interpolation
+- VNG (Variable Number of Gradients) Bayer demosaicing — edge-aware, no moiré artefacts
+- Centroid-based global alignment (sub-pixel accuracy)
+- Alignment Point (AP) placement with ring shadow detection and cell-based uniform coverage
 - RGB channel alignment for atmospheric dispersion correction
 - Backwards bilinear drizzle at 1×, 1.5×, 2×, and 3× scale (full √N noise reduction)
 - Sigma-kappa outlier rejection
-- Histogram overlay (log-scale, AS!4 style)
+- Histogram overlay (log-scale, luminance + RGB channels)
 - Multi-percentage stacking in a single run (F25, F50, F75 subfolders)
 - Batch processing for multiple video files
 - Session save and restore (.json)
@@ -44,18 +45,27 @@ See the [Releases page](https://github.com/tbgh011/lucid/releases) to download t
 - The included installer handles all dependencies automatically
 
 ## Installation
+
 ### Windows
-Download and extract `lucid_v1.2.0.zip`, then open `installer\windows\`, right-click `install.bat` and choose **Run as administrator**.
+
+Download and extract `lucid_v1.2.2.zip`, then open `installer\windows\`, right-click `install.bat` and choose **Run as administrator**.
+
 ### Linux
-Download and extract `lucid_v1.2.0.zip`, then open Terminal and run:
+
+Download and extract `lucid_v1.2.2.zip`, then open Terminal and run:
+
 ```bash
 bash installer/linux/install.sh
 ```
+
 ### macOS
-Download `lucid_v1.2.0.zip` — macOS will automatically extract it to your Downloads folder. Then open Terminal and run:
+
+Download `lucid_v1.2.2.zip` — macOS will automatically extract it to your Downloads folder. Then open Terminal and run:
+
 ```bash
 bash ~/Downloads/lucid_v1/installer/macos/install.sh
 ```
+
 The installer GUI will open and guide you through the rest of the process.
 
 ## Documentation
@@ -73,7 +83,7 @@ Full documentation is included as downloads on the Releases page:
 
 Copyright © 2026 Tony Bailey. (tbgh011)
 
-This project — **Kepler: Planetary Image Processing Suite** — is released under the MIT License.  
+This project — **Lucid: Video File Align & Stack** — is released under the MIT License.  
 You are free to use, modify, distribute, and build upon this software, provided that the original copyright notice and license text are included in all copies or substantial portions of the software.
 
 See the [LICENSE](LICENSE) file for full terms.
