@@ -16,7 +16,7 @@ This helps keep all feedback organized and easy to track.
 ## Features
 
 - Quality-ranked frame selection with Laplacian sharpness metric
-- VNG (Variable Number of Gradients) Bayer demosaicing — edge-aware, no moiré artefacts
+- VNG (Variable Number of Gradients) Bayer demosaicing — edge-aware
 - Centroid-based global alignment (sub-pixel accuracy)
 - Alignment Point (AP) placement with ring shadow detection and cell-based uniform coverage
 - RGB channel alignment for atmospheric dispersion correction
