@@ -42,7 +42,12 @@ See the [Releases page](https://github.com/tbgh011/lucid/releases) to download t
 
 ### Windows
 
-Download and extract `lucid_v130.zip`, then open `installer\windows\`, right-click `install.bat` and choose **Run as administrator**.
+Download `lucid_v130.zip`, then right-click it and choose **Extract All**.
+
+> Windows extracts into a new folder named after the zip, so you may end up with `lucid_v130\lucid_v130\` — that is normal. To avoid it, delete the trailing `lucid_v130` from the destination path in the Extract dialog.
+
+Open the extracted `lucid_v130` folder, go to `installer\windows\`, then right-click `install.bat` and choose **Run as administrator**.
+
 
 ### Linux
 
