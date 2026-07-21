@@ -11,10 +11,13 @@ This helps keep all feedback organized and easy to track.
 - Quality-ranked frame selection with Laplacian sharpness metric
 - VNG (Variable Number of Gradients) Bayer demosaicing — edge-aware
 - Centroid-based global alignment (sub-pixel accuracy)
+- Multi-threaded analysis + adaptive decoded-frame RAM buffer (Analyze, Stack, Expand)
+- Disk-locked centroid alignment (sub-pixel accuracy, robust to nearby moons)
+- Expand Recording — split one continuous capture into numbered sequence of stacks
 - Alignment Point (AP) placement with ring shadow detection and cell-based uniform coverage
 - RGB channel alignment for atmospheric dispersion correction
 - Backwards bilinear drizzle at 1×, 1.5×, 2×, and 3× scale (full √N noise reduction)
-- Parallel stacking — read, align, and warp frames across all available CPU cores (~2× faster on 8-core machines)
+- Parallel stacking — read, align, warp frames across CPU cores (~2× faster on 8-core machines)
 - Sigma-kappa outlier rejection
 - Histogram overlay (log-scale, luminance + RGB channels)
 - Multi-percentage stacking in a single run (F25, F50, F75 subfolders)
