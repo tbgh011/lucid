@@ -41,19 +41,27 @@ See the [Releases page](https://github.com/tbgh011/lucid/releases) to download t
 ## Installation
 
 ### Windows
-Download and extract `lucid_v1.3.0.zip`, then open `installer\windows\`, right-click `install.bat` and choose **Run as administrator**.
+
+Download and extract `lucid_v130.zip`, then open `installer\windows\`, right-click `install.bat` and choose **Run as administrator**.
 
 ### Linux
-Download and extract `lucid_v1.3.0.zip`, then open Terminal and run:
+
+Download `lucid_v130.zip` to your Downloads folder, then open Terminal and run:
+
 ```bash
-bash installer/linux/install.sh
+cd ~/Downloads
+unzip lucid_v130.zip
+bash ~/Downloads/lucid_v130/installer/linux/install.sh
 ```
 
 ### macOS
-Download `lucid_v1.3.0.zip` — macOS will automatically extract it to your Downloads folder. Then open Terminal and run:
+
+Download `lucid_v130.zip` — macOS will automatically extract it to your Downloads folder. Then open Terminal and run:
+
 ```bash
-bash ~/Downloads/lucid_v1/installer/macos/install.sh
+bash ~/Downloads/lucid_v130/installer/macos/install.sh
 ```
+
 The installer GUI will open and guide you through the rest of the process.
 
 ## Documentation
