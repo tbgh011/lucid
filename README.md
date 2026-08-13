@@ -25,7 +25,7 @@ This helps keep all feedback organized and easy to track.
 - Sigma-kappa outlier rejection
 - Histogram overlay (log-scale, luminance + RGB channels)
 - Multi-percentage stacking in a single run (F25, F50, F75 subfolders)
-- Expand Recording — split one continuous capture into a numbered sequence of stacks (by number of stacks or segment length, with optional overlap) for smoother animations
+- Expand Recording — split one continuous capture into a sequence of stacks (by number of stacks or segment length, with optional overlap), each named by its midpoint UTC capture time for WinJUPOS derotation
 - Batch processing for multiple video files
 - Session save and restore (.json)
 - Output: TIFF 16-bit, PNG, FITS
@@ -50,28 +50,28 @@ See the [Releases page](https://github.com/tbgh011/lucid/releases) to download t
 
 ### Windows
 
-Download `lucid_v130.zip`, then right-click it and choose **Extract All**.
+Download `lucid_v131.zip`, then right-click it and choose **Extract All**.
 
-> Windows extracts into a new folder named after the zip, so you may end up with `lucid_v130\lucid_v130\` — that is normal. To avoid it, delete the trailing `lucid_v130` from the destination path in the Extract dialog.
+> Windows extracts into a new folder named after the zip, so you may end up with `lucid_v131\lucid_v131\` — that is normal. To avoid it, delete the trailing `lucid_v131` from the destination path in the Extract dialog.
 
-Open the extracted `lucid_v130` folder, go to `installer\windows\`, then right-click `install.bat` and choose **Run as administrator**.
+Open the extracted `lucid_v131` folder, go to `installer\windows\`, then right-click `install.bat` and choose **Run as administrator**.
 
 ### Linux
 
-Download `lucid_v130.zip` to your Downloads folder, then open Terminal and run:
+Download `lucid_v131.zip` to your Downloads folder, then open Terminal and run:
 
 ```bash
 cd ~/Downloads
-unzip lucid_v130.zip
-bash ~/Downloads/lucid_v130/installer/linux/install.sh
+unzip lucid_v131.zip
+bash ~/Downloads/lucid_v131/installer/linux/install.sh
 ```
 
 ### macOS
 
-Download `lucid_v130.zip` — macOS will automatically extract it to your Downloads folder. Then open Terminal and run:
+Download `lucid_v131.zip` — macOS will automatically extract it to your Downloads folder. Then open Terminal and run:
 
 ```bash
-bash ~/Downloads/lucid_v130/installer/macos/install.sh
+bash ~/Downloads/lucid_v131/installer/macos/install.sh
 ```
 
 The installer GUI will open and guide you through the rest of the process.
