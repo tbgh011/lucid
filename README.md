@@ -19,9 +19,11 @@ This helps keep all feedback organized and easy to track.
 - Multi-threaded analysis with an adaptive decoded-frame RAM buffer (reused across Analyze, Stack, and every Expand window)
 - VNG (Variable Number of Gradients) Bayer demosaicing — edge-aware, no moiré artifacts
 - Disk-locked centroid alignment (sub-pixel accuracy, robust to nearby moons)
-- Alignment Point (AP) placement with ring shadow detection and cell-based uniform coverage
+- Two alignment modes: Global (one whole-disk stack) and Local (per-AP) — lucky-region stacking that keeps each region's own locally-sharpest frames for noticeably crisper detail when stacking selectively
+- Feature-driven Alignment Point (AP) placement — true multi-scale size tiers, snapping to local detail (belt edges, limb, crater rims), ring shadow detection, and irregular spacing that skips dark/featureless areas
 - RGB channel alignment for atmospheric dispersion correction
-- Backwards bilinear drizzle at 1×, 1.5×, 2×, and 3× scale (full √N noise reduction)
+- Bicubic sub-pixel warping (sharper than bilinear, no edge ringing)
+- Backwards bicubic drizzle at 1×, 1.5×, 2×, and 3× scale (full √N noise reduction)
 - Sigma-kappa outlier rejection
 - Histogram overlay (log-scale, luminance + RGB channels)
 - Multi-percentage stacking in a single run (F25, F50, F75 subfolders)
@@ -50,28 +52,28 @@ See the [Releases page](https://github.com/tbgh011/lucid/releases) to download t
 
 ### Windows
 
-Download `lucid_v131.zip`, then right-click it and choose **Extract All**.
+Download `lucid_v132.zip`, then right-click it and choose **Extract All**.
 
-> Windows extracts into a new folder named after the zip, so you may end up with `lucid_v131\lucid_v131\` — that is normal. To avoid it, delete the trailing `lucid_v131` from the destination path in the Extract dialog.
+> Windows extracts into a new folder named after the zip, so you may end up with `lucid_v132\lucid_v132\` — that is normal. To avoid it, delete the trailing `lucid_v132` from the destination path in the Extract dialog.
 
-Open the extracted `lucid_v131` folder, go to `installer\windows\`, then right-click `install.bat` and choose **Run as administrator**.
+Open the extracted `lucid_v132` folder, go to `installer\windows\`, then right-click `install.bat` and choose **Run as administrator**.
 
 ### Linux
 
-Download `lucid_v131.zip` to your Downloads folder, then open Terminal and run:
+Download `lucid_v132.zip` to your Downloads folder, then open Terminal and run:
 
 ```bash
 cd ~/Downloads
-unzip lucid_v131.zip
-bash ~/Downloads/lucid_v131/installer/linux/install.sh
+unzip lucid_v132.zip
+bash ~/Downloads/lucid_v132/installer/linux/install.sh
 ```
 
 ### macOS
 
-Download `lucid_v131.zip` — macOS will automatically extract it to your Downloads folder. Then open Terminal and run:
+Download `lucid_v132.zip` — macOS will automatically extract it to your Downloads folder. Then open Terminal and run:
 
 ```bash
-bash ~/Downloads/lucid_v131/installer/macos/install.sh
+bash ~/Downloads/lucid_v132/installer/macos/install.sh
 ```
 
 The installer GUI will open and guide you through the rest of the process.
