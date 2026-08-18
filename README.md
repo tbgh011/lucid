@@ -22,6 +22,7 @@ This helps keep all feedback organized and easy to track.
 - Two alignment modes: Global (one whole-disk stack) and Local (per-AP) — lucky-region stacking that keeps each region's own locally-sharpest frames for noticeably crisper detail when stacking selectively
 - Feature-driven Alignment Point (AP) placement — true multi-scale size tiers, snapping to local detail (belt edges, limb, crater rims), ring shadow detection, and irregular spacing that skips dark/featureless areas
 - RGB channel alignment for atmospheric dispersion correction
+- Optional pre-process blur (vertical/horizontal) that steadies alignment on noisy or low-contrast targets without softening the stacked image
 - Bicubic sub-pixel warping (sharper than bilinear, no edge ringing)
 - Backwards bicubic drizzle at 1×, 1.5×, 2×, and 3× scale (full √N noise reduction)
 - Sigma-kappa outlier rejection
