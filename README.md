@@ -1,100 +1,43 @@
-# Lucid — Video File Align & Stack
+<hr>
+<h2>Lucid v1.3.4 — Video File Align &amp; Stack</h2>
+<h3>What's New in v1.3.4</h3>
+<ul>
+<li><strong>True Drizzle reconstruction (super-resolution)</strong> — a new <em>True drizzle</em> option on the Stack tab (needs Drizzle set above 1x) rebuilds the stacked image with variable-pixel linear reconstruction instead of the previous backwards-bilinear accumulate. Every frame is globally aligned and its pixels are dropped onto a grid three times finer than the sensor, then bicubic-downsampled to the drizzle scale. Because the planet drifts slightly between frames, real sub-pixel samples fill the finer grid — recovering genuine detail from natural jitter rather than interpolating — and the uniform, quality-weighted accumulation gives a noticeably cleaner disk (no quilted texture) than the earlier method. Leave it off for the classic reconstruction</li>
+<li><strong>Gradient frame selection (Automatic estimator)</strong> — the Analyze and Batch <em>Automatic</em> quality estimator now ranks frames by edge sharpness (gradient magnitude) instead of pixel-to-pixel variance. On poor-seeing captures this stops the selection from favoring grainy frames that variance mistakes for sharpness, so the frames that actually contribute are genuinely sharper; on clean captures it makes no difference. The change is automatic — no settings to adjust</li>
+<li><strong>Flatten background</strong> — an optional <em>Flatten background</em> toggle on the Stack tab subtracts the sky pedestal so the disk sits on a near-black background, matching a dynamic-background workflow. Off by default, so existing output is unchanged</li>
+</ul>
 
-Lucid is a free, open source, actively developed video file align and stack application for Linux, macOS and Windows.
+<h3>Downloads</h3>
 
-## Reporting Bugs and Requesting Features
-
-To report a bug, request a feature, or ask a question, please use the **Issues** tab at the top of this repository.
-
-1. Click **Issues**
-2. Click **New Issue**
-3. Choose the Bug Report or Feature Request template
-4. Fill in the details and submit
-
-This helps keep all feedback organized and easy to track.
-
-## Features
-
-- Quality-ranked frame selection with Laplacian sharpness metric
-- Multi-threaded analysis with an adaptive decoded-frame RAM buffer (reused across Analyze, Stack, and every Expand window)
-- VNG (Variable Number of Gradients) Bayer demosaicing — edge-aware, no moiré artifacts
-- Disk-locked centroid alignment (sub-pixel accuracy, robust to nearby moons)
-- Two alignment modes: Global (one whole-disk stack) and Local (per-AP) — lucky-region stacking that keeps each region's own locally-sharpest frames for noticeably crisper detail when stacking selectively
-- Feature-driven Alignment Point (AP) placement — true multi-scale size tiers, snapping to local detail (belt edges, limb, crater rims), ring shadow detection, and irregular spacing that skips dark/featureless areas
-- RGB channel alignment for atmospheric dispersion correction
-- Optional pre-process blur (vertical/horizontal) that steadies alignment on noisy or low-contrast targets without softening the stacked image
-- Bicubic sub-pixel warping (sharper than bilinear, no edge ringing)
-- Backwards bicubic drizzle at 1×, 1.5×, 2×, and 3× scale (full √N noise reduction)
-- Sigma-kappa outlier rejection
-- Histogram overlay (log-scale, luminance + RGB channels)
-- Multi-percentage stacking in a single run (F25, F50, F75 subfolders)
-- Expand Recording — split one continuous capture into a sequence of stacks (by number of stacks or segment length, with optional overlap), each named by its midpoint UTC capture time for WinJUPOS derotation
-- Batch processing for multiple video files
-- Session save and restore (.json)
-- Output: TIFF 16-bit, PNG, FITS
-
-## Supported Formats
-
-- **Input:** SER (raw Bayer RGGB/GRBG/GBRG/BGGR, BGR color, monochrome), AVI
-- **Output:** TIFF 16-bit, PNG, FITS
-
-## Download
-
-See the [Releases page](https://github.com/tbgh011/lucid/releases) to download the latest version.
-
-## Requirements
-
-- Python 3.8+
-- Windows 10/11, Linux (Ubuntu / Mint / Debian / Fedora / Arch), or macOS 10.15+
-- macOS requires Python 3.11+ (the system Python has a broken Tk)
-- The included installer handles all dependencies automatically
+File | Description
+-- | --
+lucid_v134.zip | Application + Windows, macOS &amp; Linux installers + PDF guides
+Lucid_Installation_Guide_v134.pdf | Installation instructions for Windows, macOS, and Linux
+Lucid_User_Guide_v134.pdf | Complete user guide
+Lucid_Technical_Reference_v134.pdf | Algorithm and API reference
+Lucid_Tutorials_v134.pdf | Step-by-step tutorials for Lunar, Mars, Jupiter, and Saturn
 
 ## Installation
 
 ### Windows
+Download `lucid_v134.zip`, then right-click it and choose **Extract All**.
 
-Download `lucid_v133.zip`, then right-click it and choose **Extract All**.
+> Windows extracts into a new folder named after the zip, so you may end up with `lucid_v134\lucid_v134\` — that is normal. To avoid it, delete the trailing `lucid_v134` from the destination path in the Extract dialog.
 
-> Windows extracts into a new folder named after the zip, so you may end up with `lucid_v133\lucid_v133\` — that is normal. To avoid it, delete the trailing `lucid_v133` from the destination path in the Extract dialog.
-
-Open the extracted `lucid_v133` folder, go to `installer\windows\`, then right-click `install.bat` and choose **Run as administrator**.
+Open the extracted `lucid_v134` folder, go to `installer\windows\`, then right-click `install.bat` and choose **Run as administrator**.
 
 ### Linux
-
-Download `lucid_v133.zip` to your Downloads folder, then open Terminal and run:
+Download `lucid_v134.zip` to your Downloads folder, then open Terminal and run:
 
 ```bash
 cd ~/Downloads
-unzip lucid_v133.zip
-bash ~/Downloads/lucid_v133/installer/linux/install.sh
+unzip lucid_v134.zip
+bash ~/Downloads/lucid_v134/installer/linux/install.sh
 ```
 
 ### macOS
-
-Download `lucid_v133.zip` — macOS will automatically extract it to your Downloads folder. Then open Terminal and run:
+Download `lucid_v134.zip` — macOS will automatically extract it to your Downloads folder. Then open Terminal and run:
 
 ```bash
-bash ~/Downloads/lucid_v133/installer/macos/install.sh
+bash ~/Downloads/lucid_v134/installer/macos/install.sh
 ```
-
-The installer GUI will open and guide you through the rest of the process.
-
-## Documentation
-
-Full documentation is included as downloads on the Releases page:
-
-| Document | Description |
-|----------|-------------|
-| Installation Guide | Step-by-step installation for Windows, macOS, and Linux |
-| User Guide | Interface reference, tab descriptions, practical tips |
-| Technical Reference | Algorithm details, architecture, API reference |
-| Tutorials | Worked examples for Jupiter, Saturn, and other targets |
-
-## Copyright
-
-Copyright © 2026 Tony Bailey. (tbgh011)
-
-This project — **Lucid: Video File Align & Stack** — is released under the MIT License.  
-You are free to use, modify, distribute, and build upon this software, provided that the original copyright notice and license text are included in all copies or substantial portions of the software.
-
-See the [LICENSE](LICENSE) file for full terms.
