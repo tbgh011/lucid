@@ -53,28 +53,28 @@ See the [Releases page](https://github.com/tbgh011/lucid/releases) to download t
 
 ### Windows
 
-Download `lucid_v134.zip`, then right-click it and choose **Extract All**.
+Download `lucid_v135.zip`, then right-click it and choose **Extract All**.
 
-> Windows extracts into a new folder named after the zip, so you may end up with `lucid_v134\lucid_v134\` — that is normal. To avoid it, delete the trailing `lucid_v134` from the destination path in the Extract dialog.
+> Windows extracts into a new folder named after the zip, so you may end up with `lucid_v135\lucid_v135\` — that is normal. To avoid it, delete the trailing `lucid_v135` from the destination path in the Extract dialog.
 
-Open the extracted `lucid_v134` folder, go to `installer\windows\`, then right-click `install.bat` and choose **Run as administrator**.
+Open the extracted `lucid_v135` folder, go to `installer\windows\`, then right-click `install.bat` and choose **Run as administrator**.
 
 ### Linux
 
-Download `lucid_v134.zip` to your Downloads folder, then open Terminal and run:
+Download `lucid_v135.zip` to your Downloads folder, then open Terminal and run:
 
 ```bash
 cd ~/Downloads
-unzip lucid_v134.zip
-bash ~/Downloads/lucid_v134/installer/linux/install.sh
+unzip lucid_v135.zip
+bash ~/Downloads/lucid_v135/installer/linux/install.sh
 ```
 
 ### macOS
 
-Download `lucid_v134.zip` — macOS will automatically extract it to your Downloads folder. Then open Terminal and run:
+Download `lucid_v135.zip` — macOS will automatically extract it to your Downloads folder. Then open Terminal and run:
 
 ```bash
-bash ~/Downloads/lucid_v134/installer/macos/install.sh
+bash ~/Downloads/lucid_v135/installer/macos/install.sh
 ```
 
 The installer GUI will open and guide you through the rest of the process.
