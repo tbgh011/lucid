@@ -17,18 +17,19 @@ This helps keep all feedback organized and easy to track.
 
 - Quality-ranked frame selection with Laplacian sharpness metric
 - Multi-threaded analysis with an adaptive decoded-frame RAM buffer (reused across Analyze, Stack, and every Expand window)
-- VNG (Variable Number of Gradients) Bayer demosaicing — edge-aware, no moiré artifacts
+- **Bayer Drizzle** — raw R/G/B sensor samples reconstructed on separate color grids with **no per-frame demosaic**, for sharper color with far less speckle (automatic for any raw Bayer file)
+- **JIT-accelerated, multi-core stacking** (compiled scatter across all cores; automatic NumPy fallback with identical output)
 - Disk-locked centroid alignment (sub-pixel accuracy, robust to nearby moons)
 - Two alignment modes: Global (one whole-disk stack) and Local (per-AP) — lucky-region stacking that keeps each region's own locally-sharpest frames for noticeably crisper detail when stacking selectively
 - Feature-driven Alignment Point (AP) placement — true multi-scale size tiers, snapping to local detail (belt edges, limb, crater rims), ring shadow detection, and irregular spacing that skips dark/featureless areas
 - RGB channel alignment for atmospheric dispersion correction
 - Optional pre-process blur (vertical/horizontal) that steadies alignment on noisy or low-contrast targets without softening the stacked image
 - Bicubic sub-pixel warping (sharper than bilinear, no edge ringing)
-- Backwards bicubic drizzle at 1×, 1.5×, 2×, and 3× scale (full √N noise reduction)
+- Single **Drizzle** control — 1×, 1.5×, 2×, 3× (separate-channel Bayer Drizzle for raw CFA files; forward variable-pixel drizzle for mono/RGB)
 - Sigma-kappa outlier rejection
 - Histogram overlay (log-scale, luminance + RGB channels)
 - Multi-percentage stacking in a single run (F25, F50, F75 subfolders)
-- Expand Recording — split one continuous capture into a sequence of stacks (by number of stacks or segment length, with optional overlap), each named by its midpoint UTC capture time for WinJUPOS derotation
+- Expand Recording — split one continuous capture into a sequence of stacks (by number of stacks or segment length, with optional overlap), each named by its midpoint UTC capture time for derotation
 - Batch processing for multiple video files
 - Session save and restore (.json)
 - Output: TIFF 16-bit, PNG, FITS
@@ -53,28 +54,28 @@ See the [Releases page](https://github.com/tbgh011/lucid/releases) to download t
 
 ### Windows
 
-Download `lucid_v133.zip`, then right-click it and choose **Extract All**.
+Download `lucid_v200.zip`, then right-click it and choose **Extract All**.
 
-> Windows extracts into a new folder named after the zip, so you may end up with `lucid_v133\lucid_v133\` — that is normal. To avoid it, delete the trailing `lucid_v133` from the destination path in the Extract dialog.
+> Windows extracts into a new folder named after the zip, so you may end up with `lucid_v200\lucid_v200\` — that is normal. To avoid it, delete the trailing `lucid_v200` from the destination path in the Extract dialog.
 
-Open the extracted `lucid_v133` folder, go to `installer\windows\`, then right-click `install.bat` and choose **Run as administrator**.
+Open the extracted `lucid_v200` folder, go to `installer\windows\`, then right-click `install.bat` and choose **Run as administrator**.
 
 ### Linux
 
-Download `lucid_v133.zip` to your Downloads folder, then open Terminal and run:
+Download `lucid_v200.zip` to your Downloads folder, then open Terminal and run:
 
 ```bash
 cd ~/Downloads
-unzip lucid_v133.zip
-bash ~/Downloads/lucid_v133/installer/linux/install.sh
+unzip lucid_v200.zip
+bash ~/Downloads/lucid_v200/installer/linux/install.sh
 ```
 
 ### macOS
 
-Download `lucid_v133.zip` — macOS will automatically extract it to your Downloads folder. Then open Terminal and run:
+Download `lucid_v200.zip` — macOS will automatically extract it to your Downloads folder. Then open Terminal and run:
 
 ```bash
-bash ~/Downloads/lucid_v133/installer/macos/install.sh
+bash ~/Downloads/lucid_v200/installer/macos/install.sh
 ```
 
 The installer GUI will open and guide you through the rest of the process.
