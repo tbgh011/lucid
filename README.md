@@ -91,6 +91,8 @@ Full documentation is included as downloads on the Releases page:
 | Technical Reference | Algorithm details, architecture, API reference |
 | Tutorials | Worked examples for Jupiter, Saturn, and other targets |
 
+Lucid is based on the concepts of AutoStakkert! (https://www.autostakkert.com/)
+
 ## Copyright
 
 Copyright © 2026 Tony Bailey. (tbgh011)
