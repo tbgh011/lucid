@@ -54,28 +54,28 @@ See the [Releases page](https://github.com/tbgh011/lucid/releases) to download t
 
 ### Windows
 
-Download `lucid_v201.zip`, then right-click it and choose **Extract All**.
+Download `lucid_v202.zip`, then right-click it and choose **Extract All**.
 
-> Windows extracts into a new folder named after the zip, so you may end up with `lucid_v201\lucid_v201\` — that is normal. To avoid it, delete the trailing `lucid_v201` from the destination path in the Extract dialog.
+> Windows extracts into a new folder named after the zip, so you may end up with `lucid_v202\lucid_v202\` — that is normal. To avoid it, delete the trailing `lucid_v202` from the destination path in the Extract dialog.
 
-Open the extracted `lucid_v201` folder, go to `installer\windows\`, then right-click `install.bat` and choose **Run as administrator**.
+Open the extracted `lucid_v202` folder, go to `installer\windows\`, then right-click `install.bat` and choose **Run as administrator**.
 
 ### Linux
 
-Download `lucid_v201.zip` to your Downloads folder, then open Terminal and run:
+Download `lucid_v202.zip` to your Downloads folder, then open Terminal and run:
 
 ```bash
 cd ~/Downloads
-unzip lucid_v201.zip
-bash ~/Downloads/lucid_v201/installer/linux/install.sh
+unzip lucid_v202.zip
+bash ~/Downloads/lucid_v202/installer/linux/install.sh
 ```
 
 ### macOS
 
-Download `lucid_v201.zip` — macOS will automatically extract it to your Downloads folder. Then open Terminal and run:
+Download `lucid_v202.zip` — macOS will automatically extract it to your Downloads folder. Then open Terminal and run:
 
 ```bash
-bash ~/Downloads/lucid_v201/installer/macos/install.sh
+bash ~/Downloads/lucid_v202/installer/macos/install.sh
 ```
 
 The installer GUI will open and guide you through the rest of the process.
